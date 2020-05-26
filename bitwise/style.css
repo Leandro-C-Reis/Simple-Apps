@@ -1,0 +1,67 @@
+
+:root {
+  --default-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(rgb(74, 122, 80), rgb(26, 54, 31));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.container {
+  text-align: center;
+  color: var(--default-color);
+}
+
+.container .inputs {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 20px 0;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: none;
+  margin: 10px 5px;
+  
+  border: 1px solid var(--default-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.output {
+  cursor: default;
+}
+
+.selected {
+  background: var(--default-color);
+}
+
+.operators {
+  margin-bottom: 15px;
+}
+
+.operators span{
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.not {
+  background: var(--default-color);
+  cursor: default;
+  opacity: 0.3;
+}
+
+.operator-selected {
+  text-decoration-line: underline;
+}

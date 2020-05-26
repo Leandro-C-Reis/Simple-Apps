@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitwise</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    Input 1:
+    <div class="inputs">
+      <div class="circle" id="i1-1" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-2" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-3" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-4" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-5" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-6" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-7" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-8" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i1-9" onclick="select(this)" bit-value="false"></div>
+    </div>
+    Input 2:
+    <div class="inputs inputs2">
+      <div class="circle" id="i2-1" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-2" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-3" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-4" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-5" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-6" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-7" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-8" onclick="select(this)" bit-value="false"></div>
+      <div class="circle" id="i2-9" onclick="select(this)" bit-value="false"></div>
+    </div>
+    <div class="operators">
+      <span value="and" onclick="setOperator(this)">AND</span>
+      <span value="or"  onclick="setOperator(this)">OR</span>
+      <span value="xor" onclick="setOperator(this)">XOR</span>
+      <span value="not" onclick="setOperator(this)">NOT</span>
+    </div>
+    Output:
+    <div class="inputs">
+      <div class="circle output" id="output1"></div>
+      <div class="circle output" id="output2"></div>
+      <div class="circle output" id="output3"></div>
+      <div class="circle output" id="output4"></div>
+      <div class="circle output" id="output5"></div>
+      <div class="circle output" id="output6"></div>
+      <div class="circle output" id="output7"></div>
+      <div class="circle output" id="output8"></div>
+      <div class="circle output" id="output9"></div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

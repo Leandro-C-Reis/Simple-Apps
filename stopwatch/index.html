@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Stopwatch</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="icons" onclick="start()">
+        <svg class="clock" viewBox="0 0 24 24" fill="white" width="40px" height="40px">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M15.07 1.01h-6v2h6v-2zm-4 13h2v-6h-2v6zm8.03-6.62l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.14 4.74 14.19 4 12.07 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.11-.74-4.06-1.97-5.61zm-7.03 12.62c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
+        </svg>
+      </div>
+      <span class="text-SR start" onclick="start()">START</span>
+    </div>
+    <div class="center">
+      <svg viewBox="0 0 100 100" width="300" height="300" class="clock-timer">
+        <g transform="translate(50 50)">
+          <circle id="dial" cx="0" cy="0" r="42" fill="none" stroke="white" stroke-width="5"
+            stroke-dasharray="0.3 1.898"></circle>
+          <g transform="rotate(0)" style="transition: transform 0.2s ease-in-out 0s;">
+            <g transform="translate(0 -50)">
+              <path d="M -2.25 0 h 4.5 l -2.25 2.5 l -2.25 -2.5" fill="white" stroke="white" stroke-width="1"
+                stroke-linejoin="round" stroke-linecap="round"></path>
+            </g>
+          </g>
+          <text text-anchor="middle" id="time" fill="white" dominant-baseline="middle" font-size="10"
+            style="font-weight: 300; letter-spacing: 1px; font-family: 'Share Tech Mono', sans-serif;">00:00:00</text>
+        </g>
+      </svg>
+    </div>
+    <div class="right">
+      <div class="icons" id="reset" onclick="reset()">
+        <svg class="reset-icon reset" height="40" viewBox="0 0 24 24" fill="white" width="40">
+          <path
+            d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z" />
+          <path d="M0 0h24v24H0z" fill="none" /></svg>
+      </div>
+      <span class="text-SR reset text" onclick="reset()">RESET</span>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

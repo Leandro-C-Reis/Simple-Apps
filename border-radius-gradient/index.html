@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Radius Styles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <div class="left-right">
+      <input type="range" class="input-lateral slider" id="left"
+      min="0" max="100" value="0"
+      >
+    </div>
+    <div class="columnMid">
+      <div class="top-bottom">
+        <input type="range" class="input-header slider" id="top"
+        min="0" max="100" value="100">
+      </div>
+      <div id="content"></div>
+      <div class="top-bottom">
+        <input type="range" class="input-header slider" id="bottom"
+        min="0" max="100" value="0"
+        >
+      </div>
+    </div>
+    <div class="left-right">
+      <input type="range" class="input-lateral slider" id="right"
+      min="0" max="100" value="100"
+      >
+    </div>
+  </div>
+    <div class="box2">
+      <span>border-radius:</span>
+      <div id="result"></div>
+      <button onclick="copyOutput()">COPY</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  background-color: rgba(19, 49, 73);
+
+  font-family: sans-serif;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-right {
+  width: 30px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnMid {
+  width: 340px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bottom {
+  width: 100%;
+  height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  width: 100%;
+  height: 340px;
+
+  background-image: linear-gradient(to bottom left, rgb(3, 68, 23), rgb(8, 116, 89));
+  box-shadow: -88px 72px 2px 0px rgb(13, 41, 58);
+}
+
+/* General Inputs Ranges*/
+.input-lateral {
+  transform: rotate(90deg);
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 340px;
+  height: 1px;
+
+  background-color: black;
+  outline: none;
+}
+
+.input-header {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 340px;
+  height: 1px;
+
+  background-color: black;
+  outline: none;
+}
+/*input Slider*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(75, 50, 121);
+  border: 2px solid white;
+  cursor: pointer;
+  
+}
+
+/* Output */
+
+.box2 {
+  margin-top: 80px;
+  width: 700px;
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+
+  font-size: 23px;
+  color: white;
+}
+
+#result {
+  width: 60%;
+  height: 45%;
+  background-color: white;
+  margin-left: 20px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+button {
+  height: 45%;
+  width: 100px;
+  border: none;
+  outline: none;
+
+  color: white;
+  font-size: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  letter-spacing: 3px;
+  
+  background: green;
+  opacity: 0.8;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(14, 148, 119);
+  opacity: 0.5;
+
+}
