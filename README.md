@@ -10,7 +10,7 @@ _based on apps-ideas repository of florinpop_
 - [Calculator](calculator)
 - [BitWise](bitwise)
 - [Base Converter](base-converter)
-- [Cause Effect](cause-effect)
+- [Cause Effect](causeEffect)
 - [Christimas Light](cristimas-light)
 - [Neon Button](card-animations/neonButton)
 - [3D Loading Animation](loading-animation)
