@@ -11,7 +11,7 @@ _based on apps-ideas repository of florinpop_
 - [BitWise](bitwise)
 - [Base Converter](base-converter)
 - [Cause Effect](causeEffect)
-- [Christimas Light](cristimas-light)
+- [Christimas Light](christimas-light)
 - [Neon Button](card-animations/neonButton)
 - [3D Loading Animation](loading-animation)
 - [Background Gradient Animation](background-color-animation)
