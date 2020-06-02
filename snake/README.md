@@ -1,1 +1,1 @@
-# Snake Game(https://leandro-c-reis.github.io/Simple-Apps/snake)
+# [Snake Game](https://leandro-c-reis.github.io/Simple-Apps/snake)
