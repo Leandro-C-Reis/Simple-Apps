@@ -89,9 +89,11 @@ function clearCurrently() {
 
 function percentage() {
     const len = array_of_numbers.length - 1;
-    array_of_numbers[len] = `${ parseFloat(array_of_numbers[len]) / 100}`;
-
-    current.innerHTML = array_of_numbers[len];
+    if (array_of_numbers[len] !== "")
+    {
+        array_of_numbers[len] = `${ parseFloat(array_of_numbers[len]) / 100}`;
+        current.innerHTML = array_of_numbers[len];
+    }
 }
 
 function print() {
