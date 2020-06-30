@@ -1,99 +1,108 @@
-let current_value = 0;
-let before_value = '';
-let operatorB = '';
-const values = ['', ''];
+const array_of_numbers = [""];
+const array_of_operators = [];
 
-const MAX_Caracters = 15;
+const before = document.getElementById("before");
+const current = document.getElementById("current");
 
-function addNumber(number){
-  if (document.getElementById("current").innerHTML == 0){
-    document.getElementById("current").innerHTML = ''
-  }
-
-  if (document.getElementById("current").innerHTML.length < MAX_Caracters)
-  {
-    document.getElementById("current").innerHTML += number; 
-  }
-}
-
-function addZero(){
-  document.getElementById("current").innerHTML += 0;
-}
-
-function operation(number1, number2, operator)
-{
-  switch(operator)
-  {
-    case '/' : return number1 / number2;
-    case 'x' : return number1 * number2;
-    case '+' : return number1 + number2;
-    case '-' : return number1 - number2;
-  }
-}
-
-function getOperator(operator){
-  displayRender(operator);
-
-  operatorB = operator;
-}
-
-function displayRender(operator)
-{
-  if (values[0] == ''){
-    if (document.getElementById('before').innerHTML != '')
-    {
-      values[0] = document.getElementById('before').innerHTML;
-    }else
-    {
-      values[0] = document.getElementById('current').innerHTML;
+function addNumber(num) {
+    const len = array_of_numbers.length - 1;
+    
+    if (array_of_numbers[len] === "" && num === ".") return; 
+    else {
+        array_of_numbers[len] += `${num}`;
+        current.innerHTML = array_of_numbers[len];
     }
-  }else {
-    values[1] = document.getElementById('current').innerHTML.substring(values[0].length + 1);
-  }
-
-  if (operatorB != '')
-  {
-    document.getElementById('before').innerHTML = operation(parseFloat(values[0]), parseFloat(values[1]), operatorB); 
-    clearCurrently();
-  }else{
-    document.getElementById('current').innerHTML += operator;
-  }
 }
 
-function addComma(){}
-function percentage(){}
+function getOperator(operator) {
+    const index = array_of_numbers.length - 1;
 
-function clearAll(){
-  document.getElementById("current").innerHTML = '';
-  document.getElementById('before').innerHTML = '';
+    if (array_of_operators.length == index &&
+        array_of_numbers[index] != "")
+    {
+        array_of_numbers.push("");
+        array_of_operators.push(operator);
+        
+    }
+    
+    print();
+} 
 
-  current_value = 0;
-  before_value = '';
-  values[0] = '';
-  values[1] = '';
-  operatorB = '';
+function result() {
+    const index = array_of_numbers.length - 1;
 
-  addZero();
+    if (array_of_numbers[index] == "") {
+        switch(array_of_operators[index - 1])
+        {
+            case "+": 
+                array_of_numbers[index] = "0";
+                break;
+            case "-": 
+                array_of_numbers[index] = "0";
+                break;
+            case "x": 
+                array_of_numbers[index] = "1";
+                break;
+            case "/": 
+                array_of_numbers[index] = "1";
+                break;
+        }
+    }
+    
+    let result = array_of_numbers.reduce((total, current, index) => {
+        switch(array_of_operators[index - 1])
+        {
+            case "+": return parseFloat(total) + parseFloat(current);
+            case "-": return parseFloat(total) - parseFloat(current);
+            case "x": return parseFloat(total) * parseFloat(current);
+            case "/": return parseFloat(total) / parseFloat(current);
+        } 
+    });
+
+    clearAll();
+    
+    before.innerHTML = result;
+    array_of_numbers[0] = before.innerHTML;
+    current.innerHTML = "0";
 }
-function clearCurrently(){
-  document.getElementById('current').innerHTML = '';
 
-  values[0] = '';
-  values[1] = '';
+function clearAll() {
+    const len = array_of_numbers.length;
 
-  addZero();
-}
-function result(){
-  if (operatorB != ''){
-    values[1] = document.getElementById('current').innerHTML.substring(values[0].length + 1);
-    document.getElementById('before').innerHTML = operation(parseFloat(values[0]), parseFloat(values[1]), operatorB);
-  }
+    for (let i = 0; i < len; i++)
+    {
+        array_of_numbers.pop()
+        array_of_operators.pop()
+    }
 
-  values[0] = '';
-  values[1] = '';
-  operatorB = '';
-  clearCurrently();
+    array_of_numbers.push("");
+    current.innerHTML = "0";
+    before.innerHTML = "";
 }
 
+function clearCurrently() {
+    current.innerHTML = "0";
 
-addZero();
+    array_of_numbers.pop();
+    array_of_numbers.push("");
+}
+
+function percentage() {
+    const len = array_of_numbers.length - 1;
+    array_of_numbers[len] = `${ parseFloat(array_of_numbers[len]) / 100}`;
+
+    current.innerHTML = array_of_numbers[len];
+}
+
+function print() {
+    before.innerHTML = "";
+    
+    array_of_numbers.map((num, index) => {
+        before.innerHTML += num;
+        if (array_of_operators[index] != null) {
+            before.innerHTML += ` ${array_of_operators[index]} `;
+        }
+    });
+    
+    current.innerHTML = "0";
+}
